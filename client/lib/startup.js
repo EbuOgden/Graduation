@@ -18,7 +18,7 @@ Meteor.startup(function(){
     Push.Configure({
         gcm: {
             // Required for Android and Chrome OS
-            projectNumber: '526519238456'
+            projectNumber: '********'
         },
         bagde: true,
         sound: true,
