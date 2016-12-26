@@ -1,0 +1,120 @@
+<template name="lectureSelect">
+
+    {{#if isAndroid}}
+
+    {{else}}
+
+    <div class="bar bar-header barHeaderColoriOS">
+        <div class="col-10"></div>
+        <h1 class="title homeTitleAlign">Lecture & Consultant Select</h1>
+
+    </div>
+    {{#ionView}}
+      {{#ionContent class="has-header generalView"}}
+
+      <div class="row">
+        <div class="col">
+          <div class="item item-divider">
+              Faculty
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="list">
+              {{#each faculty}}
+                <div class="item ink facultyId" id="{{_id}}">
+                    {{facultyName}}
+                </div>
+              {{/each}}
+          </div>
+        </div>
+
+      </div>
+
+      {{#if facultySelect}}
+      <div class="row">
+        <div class="col" id="departmentHeader">
+          <div class="item item-divider">
+              Departments
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" id="departmentSection">
+          <div class="list">
+              {{#each department}}
+                <div class="item ink departmentId" id="{{_id}}">
+                    {{departmentName}}
+                </div>
+              {{/each}}
+          </div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if departmentSelect}}
+      <div class="row">
+        <div class="col" id="lecturesHeader">
+          <div class="item item-divider">
+              Lectures
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" id="lectureSection">
+          <div class="list">
+              {{#each lectures}}
+
+                <div class="item ink lectureId" id="{{_id}}">
+                    {{lectureName}}
+                    <h4 id="profName">{{profName}}</h4>
+                </div>
+
+              {{/each}}
+          </div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if lectureFinish}}
+      <div class="row">
+        <div class="col">
+            <button id="lectureFinish" class="button" style="float:right;	background-color:#6699cc;	color:white;" >Consultant List</button>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if consultantSelect}}
+      <div class="row">
+        <div class="col" id="consultantSection">
+            <div class="list">
+                {{#each consultants}}
+                    <div class="item ink consultantId" id="{{_id}}">
+                        {{consultantName}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if consultantFinish}}
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <button id="finish" class="button" style="float:right; background-color:#6699cc; color:white;">Finish</button>
+        </div>
+      </div>
+
+      {{/if}}
+
+
+
+      {{/ionContent}}
+    {{/ionView}}
+    {{/if}}
+</template>

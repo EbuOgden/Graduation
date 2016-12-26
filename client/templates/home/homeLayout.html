@@ -1,0 +1,29 @@
+<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Ebubekir Öğden">
+		<meta name="description" content="An app for initial communication between academics and students">
+		<meta name="keywords" content="communication,free,fast,initial,app,apps,student,university">
+</head>
+
+<template name="homeLayout">
+	{{#if isAndroid}}
+		{{#ionBody}}
+
+			{{#ionNavView}}
+				{{>yield}}
+			{{/ionNavView}}
+
+		{{/ionBody}}
+
+	{{else}}
+		{{#ionBody}}
+
+			{{#ionNavView}}
+				{{>yield}}
+			{{/ionNavView}}
+
+		{{/ionBody}}
+
+	{{/if}}
+
+</template>

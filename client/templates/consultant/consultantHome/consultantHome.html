@@ -1,0 +1,172 @@
+<template name="consultantHome">
+  {{#if isAndroid}}
+  <div class="bar bar-header bar-positive">
+      <button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+      </button>
+      <div class="col-10"></div>
+      <h1 class="title homeTitleAlign">Home</h1>
+
+  </div>
+
+  {{#ionView}}
+      {{#ionContent class="has-header"}}
+
+          <br><br>
+          <div class="list">
+              <div class="item card-item">
+                  <div class="card stable-bg ink ink-dark">
+                      <div class="item item-avatar item-text-wrap takedNote" id="{{random}}">
+                          <span class="avatar" style="background-image: url('logo/logo.png');"></span>&nbsp;
+                          <strong>MALTEPE UNIVERSITY</strong>
+                          <h3 style="font-family: 'Roboto-Light'">&nbsp;&nbsp;OKUL TATIL </h3>
+                          <div class="card-footer text-right">
+                              <div class="pull-left">
+                                  <i class="icon ion-clock"></i> {{time}}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      {{/ionContent}}
+  {{/ionView}}
+
+
+  {{else}}
+
+  <div class="bar bar-header barHeaderColoriOS">
+      <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+      </button>
+      <div class="col-10"></div>
+      <h1 class="title homeTitleAlign">Home</h1>
+
+  </div>
+
+  {{#ionView}}
+      {{#ionContent class="has-header"}}
+
+      {{#if lectureGetted}}
+
+      {{#if haveNotificationRoom}}
+          {{#if schoolNotificationRoomControl}}
+
+          <div class="row">
+            <div class="col">
+              <div class="item item-divider">
+                  School Notifications
+              </div>
+            </div>
+          </div>
+
+          {{#each schoolNotificationRoom}}
+              <div class="list">
+                <div class="card stable-bg ink">
+                  <a class="item item-avatar card-item universityNotifRoom" id="{{_id}}" data-type={{notificationRoomInfo.type}}>
+                      <img src="logo/logo.png">
+                      <strong>MALTEPE UNIVERSITY</strong>
+                      <p>{{schoolLastNotifReg _id}}</p>
+                      <div class="card-footer text-right">
+                        <div class="pull-left">
+                          <h6>{{schoolLastNotifTimeReg _id}}</h6>
+                        </div>
+                      </div>
+
+                  </a>
+                </div>
+              </div>
+          {{/each}}
+
+          {{/if}}
+
+          {{#if classNotifRoomsGetted}}
+
+              {{#if countControl notificationRoomsClassCount}}
+                  {{#if countControl notificationRoomsClassNotifCount}}
+                  <div class="row">
+                    <div class="col">
+                      <div class="item item-divider">
+                          Your Lectures Notifications
+                      </div>
+                    </div>
+                  </div>
+
+                  {{#each notificationRoomsClass}}
+                      <div class="list">
+                        <div class="card stable-bg ink">
+                          <a class="item item-avatar card-item ownedClassNotifRoom" id="{{_id}}" data-lecId={{notificationRoomInfo.lectureId}} data-type={{notificationRoomInfo.type}}>
+                              <img src="logo/logo.png">
+                              <strong>{{lectureNameReg notificationRoomInfo.lectureId}}</strong>
+                              <p>{{lectureLastNotifReg _id}}</p>
+                              <div class="card-footer text-right">
+                                <div class="pull-left">
+                                  <h6>{{lectureLastNotifTimeReg _id}}</h6>
+                                </div>
+                              </div>
+
+                          </a>
+                        </div>
+                      </div>
+                  {{/each}}
+
+                {{/if}}
+
+              {{/if}}
+
+
+            {{/if}}
+
+              {{#if countControl notificationRoomsConsultantCount}}
+                  {{#if countControl notificationRoomsConsultantNotifCount}}
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="item item-divider">
+                          Your Students Notifications
+                      </div>
+                    </div>
+                  </div>
+
+                  {{#each notificationRoomsConsultant}}
+                      <div class="list">
+                        <div class="card stable-bg ink">
+                          <a class="item item-avatar card-item ownedStudentsNotifRoom" id="{{_id}}" data-type={{notificationRoomInfo.type}} data-memberId={{memberId}}>
+                              <img src="logo/logo.png">
+                              <strong>{{studentNameReg memberId}}</strong>
+                              <p>{{studentLastNotifReg _id}}</p>
+                              <div class="card-footer text-right">
+                                <div class="pull-left">
+                                  <h6>{{studentLastNotifTimeReg _id}}</h6>
+                                </div>
+                              </div>
+
+                          </a>
+                        </div>
+                      </div>
+                  {{/each}}
+
+                  {{/if}}
+
+              {{/if}}
+
+
+
+
+          {{else}}
+          <div class="centerClass">
+
+              Don't have notification(s)
+          </div>
+          {{/if}}
+
+
+      {{else}}
+      <div class="spinnerClass" >
+          {{> ionSpinner icon="ios"}}
+      </div>
+      {{/if}}
+
+            {{/ionContent}}
+    {{/ionView}}
+
+  {{/if}}
+</template>

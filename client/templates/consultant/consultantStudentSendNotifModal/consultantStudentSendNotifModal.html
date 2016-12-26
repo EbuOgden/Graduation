@@ -1,0 +1,27 @@
+<template name="consultantStudentSendNotifModal">
+  {{#ionModal customTemplate=true class="contentModalBackgroundiOS"}}
+
+      <div class="bar bar-header bar-stable">
+          {{#with student}}
+
+          <h1 class="title">{{name}}</h1>
+          {{/with}}
+          <button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+      </div>
+
+      {{#ionContent class="has-header"}}
+        <div class="list">
+          <div class="item item-divider">
+              <h3 class="title" style="text-align:center;">New Message</h3>
+          </div>
+
+          <label class="item item-input">
+                <textarea rows="5" id="newMessage" placeholder="New Message"></textarea>
+            </label>
+
+            <button class="button" style="float:right; background-color:#6699cc; color:white;" id="newNotifSend">Send</button>
+        </div>
+      {{/ionContent}}
+
+  {{/ionModal}}
+</template>

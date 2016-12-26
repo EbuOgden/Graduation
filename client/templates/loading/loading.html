@@ -1,0 +1,30 @@
+<template name="loading">
+  {{#if isAndroid}}
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            {{> ionSpinner icon="android"}}
+        </div>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+  {{else}}
+
+  {{#ionView}}
+    {{#ionContent class="center"}}
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            {{> ionSpinner icon="ios"}}
+        </div>
+
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+  {{/if}}
+</template>

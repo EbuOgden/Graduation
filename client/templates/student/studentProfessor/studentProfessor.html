@@ -1,0 +1,77 @@
+<template name="studentProfessor">
+  {{#if isAndroid}}
+
+      <div class="bar bar-header bar-positive">
+          <button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+          </button>
+          <div class="col-10"></div>
+          <h1 class="title homeTitleAlign">Teacher</h1>
+          <div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-fab button-balanced studentHeaderHome"><i class="icon ion-home"></i></button></span></div>
+
+      </div>
+
+      {{#ionView}}
+          {{#ionContent}}
+          {{#each notificationRoom}}
+              <div class="list">
+                <div class="card stable-bg ink">
+                  <a class="item item-avatar card-item professorNotifs" id="{{_id}}" data-lecId={{notificationRoomInfo.lectureId}} data-type={{notificationRoomInfo.type}}>
+                      <img src="logo/logo.png">
+                      <strong>{{lectureNameReg notificationRoomInfo.lectureId}}</strong>
+                      <p>{{lectureLastNotifReg _id}}</p>
+                      <div class="card-footer text-right">
+                        <div class="pull-left">
+                          <h6>{{lectureLastNotifTimeReg _id}}</h6>
+                        </div>
+                      </div>
+
+                  </a>
+                </div>
+              </div>
+          {{/each}}
+
+          {{/ionContent}}
+      {{/ionView}}
+
+  {{else}}
+
+  <div class="bar bar-header barHeaderColoriOS">
+      <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+      </button>
+      <div class="col-10"></div>
+      <h1 class="title homeTitleAlign">Professor</h1>
+
+  </div>
+
+  {{#ionView}}
+      {{#ionContent }}
+
+      {{#if notificationRoomClassCount}}
+          {{#each notificationRoomsClass}}
+              <div class="list">
+                <div class="card stable-bg ink">
+                  <a class="item item-avatar card-item professorNotifs" id="{{_id}}" data-lecId={{notificationRoomInfo.lectureId}} data-type={{notificationRoomInfo.type}}>
+                      <img src="logo/logo.png">
+                      <strong>{{lectureNameReg notificationRoomInfo.lectureId}}</strong>
+                      <p>{{lectureLastNotifReg _id}}</p>
+                      <div class="card-footer text-right">
+                        <div class="pull-left">
+                          <h6>{{lectureLastNotifTimeReg _id}}</h6>
+                        </div>
+                      </div>
+
+                  </a>
+                </div>
+              </div>
+          {{/each}}
+      {{/if}}
+      {{/ionContent}}
+  {{/ionView}}
+
+
+  {{/if}}
+
+</template>
+
+
+<!-- {{lectureProfNameReg notificationRoomInfo.lectureId}} Lecture Prof Name-->

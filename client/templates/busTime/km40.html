@@ -1,0 +1,49 @@
+<template name="busKm40">
+
+  <div class="row">
+  <div class="col">
+      <button class="button button-block loginButtoniOS" id="changeDirectionKm"><i class="icon ion-shuffle"></i></button>
+  </div>
+
+</div>
+
+  {{#if meslek}}
+
+      <div class="row">
+        <div class="col">
+          <div class="item item-divider">
+              <h3 style="text-align:center;">Meslek Yüksekokulu Kalkış</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <img src="/bus/km40-1.png" class="fittedImg">
+          </div>
+      </div>
+  {{/if}}
+
+  {{#if maltepe}}
+
+      <div class="row">
+        <div class="col">
+          <div class="item item-divider">
+              <h3 style="text-align:center;">Maltepe Kalkış</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <img src="/bus/km40-2.png" class="fittedImg">
+          </div>
+      </div>
+  {{/if}}
+
+  <div class="row">
+      <div class="col">
+          <img src="/bus/km40info.png" class="fittedImg">
+      </div>
+  </div>
+</template>

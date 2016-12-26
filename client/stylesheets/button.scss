@@ -1,0 +1,221 @@
+/* Button
+==================================*/
+
+.buttonAndroid,
+.buttonAndroid.button-largeAndroid,
+.buttonAndroid.button-flatAndroid,
+.barAndroid .buttonAndroid,
+.barAndroid .buttonAndroid.button-largeAndroid,
+.barAndroid .buttonAndroid.button-flatAndroid {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    height: 36px;
+    padding: 0 2rem;
+    border-radius: 2px;
+    background-clip: padding-box;
+    text-transform: uppercase;
+    border: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.buttonAndroid.disabled,
+.buttonAndroid.disabled.button-largeAndroid,
+.buttonAndroid.button-floatingAndroid.disabled,
+.buttonAndroid.button-largeAndroid.disabled,
+.buttonAndroid.buttonAndroid:disabled,
+.buttonAndroid.button-largeAndroid:disabled,
+.buttonAndroid.button-largeAndroid:disabled,
+.buttonAndroid.button-floatingAndroid:disabled,
+.barAndroid .buttonAndroid.disabled,
+.barAndroid .buttonAndroid.disabled.button-largeAndroid,
+.barAndroid .buttonAndroid.button-floatingAndroid.disabled,
+.barAndroid .buttonAndroid.button-largeAndroid.disabled,
+.barAndroid .buttonAndroid.buttonAndroid:disabled,
+.barAndroid .buttonAndroid.button-largeAndroid:disabled,
+.barAndroid .buttonAndroid.button-largeAndroid:disabled,
+.barAndroid .buttonAndroid.button-floatingAndroid:disabled {
+    background-color: #DFDFDF;
+    box-shadow: none;
+    color: #9F9F9F;
+}
+
+.buttonAndroid.disabled:hover,
+.buttonAndroid.disabled.button-large:hover,
+.buttonAndroid.button-floatingAndroid.disabled:hover,
+.buttonAndroid.button-largeAndroid.disabled:hover,
+.buttonAndroid.buttonAndroid:disabled:hover,
+.buttonAndroid.button-largeAndroid:disabled:hover,
+.buttonAndroid.button-largeAndroid:disabled:hover,
+.buttonAndroid.button-floatingAndroid:disabled:hover,
+.barAndroid .buttonAndroid.disabled:hover,
+.barAndroid .buttonAndroid.disabled.button-large:hover,
+.barAndroid .buttonAndroid.button-floating.disabled:hover,
+.barAndroid .buttonAndroid.button-large.disabled:hover,
+.barAndroid .buttonAndroid.button:disabled:hover,
+.barAndroid .buttonAndroid.button-large:disabled:hover,
+.barAndroid .buttonAndroid.button-large:disabled:hover,
+.barAndroid .buttonAndroid.button-floating:disabled:hover {
+    background-color: #DFDFDF;
+    color: #9F9F9F;
+}
+
+.buttonAndroid i,
+.buttonAndroid.button-largeAndroid i,
+.buttonAndroid.button-floatingAndroid i,
+.buttonAndroid.button-largeAndroid i,
+.buttonAndroid.button-flatAndroid i,
+.barAndroid .buttonAndroid i,
+.barAndroid .buttonAndroid.button-largeAndroid i,
+.barAndroid .buttonAndroid.button-floatingAndroid i,
+.barAndroid .buttonAndroid.button-largeAndroid i,
+.barAndroid .buttonAndroid.button-flatAndroid i {
+    font-size: 1.3rem;
+}
+
+.button-barAndroid .buttonAndroid {
+    border-radius: 0;
+}
+
+.buttonAndroid,
+.button-largeAndroid,
+.barAndroid .buttonAndroid,
+.barAndroid .button-largeAndroid {
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.buttonAndroid {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    outline: none;
+    margin: 0;
+    /* background: transparent; */
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: inherit;
+    font-variant: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.buttonAndroid:focus {
+    outline: none;
+}
+
+.buttonAndroid.ng-hide {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.buttonAndroid.cornered {
+    border-radius: 0;
+}
+
+.buttonAndroid.raised {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.buttonAndroid-outline,
+.buttonAndroid-outline:hover,
+.buttonAndroid-outline:active {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-assertive,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-balanced,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-calm,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-dark,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-energized,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-light,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-positive,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-royal,
+.buttonAndroid.buttonAndroid-outline.buttonAndroid-stable,
+.buttonAndroid.buttonAndroid-outline {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttonAndroid-flat,
+.bar .buttonAndroid-flat {
+    box-shadow: none;
+    background-color: transparent;
+    color: #343434;
+    cursor: pointer;
+}
+
+.buttonAndroid.buttonAndroid-flat.disabled,
+.bar .buttonAndroid.buttonAndroid-flat.disabled {
+    color: #b3b3b3;
+}
+
+.buttonAndroid.buttonAndroid-large i,
+.bar .buttonAndroid.buttonAndroid-large i {
+    font-size: 1.6rem;
+}
+
+.buttonAndroid-pin-header.buttonAndroid-floating {
+    position: absolute;
+    z-index: 1000;
+}
+
+.buttonAndroid-pin-header.buttonAndroid-pin-left {
+    left: 24px;
+    top: -24px;
+}
+
+.buttonAndroid-pin-header.buttonAndroid-pin-right {
+    right: 24px;
+    top: -24px;
+}
+
+.buttonAndroid:not([disabled]).raised:focus,
+.buttonAndroid:not([disabled]).raised:hover,
+.buttonAndroid:not([disabled]).floating:focus,
+.buttonAndroid:not([disabled]).floating:hover {
+    -webkit-transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0);
+}
+
+.buttonAndroid.buttonAndroid-flat {
+    box-shadow: none;
+    /* background: transparent; */
+
+    color: inherit;
+}
+
+.buttonAndroid.buttonAndroid-flat:hover {
+    color: inherit;
+}
+
+.buttonAndroid.buttonAndroid-flat,
+.buttonAndroid.buttonAndroid-flat:hover,
+.buttonAndroid.buttonAndroid-flat:active {
+    color: #fff;
+}
+
+.buttonAndroid.buttonAndroid-clear,
+.buttonAndroid.buttonAndroid-clear:hover,
+.buttonAndroid.buttonAndroid-clear:active {
+    background: transparent;
+}
+
+
+.buttonAndroid-full.ink,
+.buttonAndroid-block.ink {
+    display: block;
+}

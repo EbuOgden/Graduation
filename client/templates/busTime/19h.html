@@ -1,0 +1,49 @@
+<template name="bus19h">
+    <div class="row">
+    <div class="col">
+        <button class="button button-block loginButtoniOS" id="changeDirectionH"><i class="icon ion-ios-shuffle-strong"></i></button>
+    </div>
+
+  </div>
+
+    {{#if meslek}}
+
+        <div class="row">
+          <div class="col">
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Meslek Yüksekokulu Kalkış</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="/bus/19h-1.png" class="fittedImg">
+            </div>
+        </div>
+    {{/if}}
+
+    {{#if kadikoy}}
+
+        <div class="row">
+          <div class="col">
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Kadıköy Kalkış</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="/bus/19h-2.png" class="fittedImg">
+            </div>
+        </div>
+    {{/if}}
+
+    <div class="row">
+        <div class="col">
+            <img src="/bus/19hinfo.png" class="fittedImg">
+        </div>
+    </div>
+
+</template>

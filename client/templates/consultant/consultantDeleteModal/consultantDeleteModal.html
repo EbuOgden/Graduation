@@ -1,0 +1,184 @@
+<template name="consultantDeleteModal">
+  {{#ionModal customTemplate=true class="contentModalBackgroundiOS"}}
+  <div class="bar bar-header bar-stable">
+      <h1 class="title">{{typeControlDelete modalType}}</h1>
+      <button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+  </div>
+
+  {{#ionContent class="generalView"}}
+    {{#if addTypeProfessorControl modalType}}
+
+      {{#if countControl professorCount}}
+          <div class="item item-divider">
+              <h3 style="text-align:center;">Professors</h3>
+          </div>
+
+              {{#each professor}}
+                  <div class="item ink profSelectDelete" id="{{_id}}">
+                      {{professorName}}
+                  </div>
+              {{/each}}
+
+              <div class="col">
+                  <button class="button consModalAdd" id="profDeleteButton" style="float:right;"><h6 class="titleColor">Delete</h6></button>
+              </div>
+      {{else}}
+          DON'T HAVE PROFESSOR
+      {{/if}}
+    {{/if}}
+
+    {{#if addTypeLectureControl modalType}}
+      {{#if countControl lectureCount}}
+
+          {{#if lectureForDelete}}
+
+              <div class="item item-divider">
+                  <h3 style="text-align:center;">Lectures</h3>
+              </div>
+              {{#each lecture}}
+
+                <div class="item ink lectureSelectDelete" id="{{_id}}">
+                    {{lectureName}}
+                </div>
+
+              {{/each}}
+
+              <div class="col">
+                  <button class="button consModalAdd" id="lecDeleteButton" style="float:right;"><h6 class="titleColor">Delete</h6></button>
+              </div>
+          {{else}}
+              {{#if isAndroid}}
+                  <div class="spinnerClass">
+                      {{> ionSpinner icon="android"}}
+                  </div>
+              {{else}}
+                  <div class="spinnerClass" >
+                      {{> ionSpinner icon="ios"}}
+                  </div>
+              {{/if}}
+
+          {{/if}}
+
+      {{else}}
+          DON'T HAVE LECTURE
+      {{/if}}
+    {{/if}}
+
+    <!-- {{#if deleteTypeLectureProfControl modalType}}
+
+    {{/if}} -->
+
+    {{#if deleteTypeDepartmentControl modalType}}
+
+      {{#if departmentCountControl}}
+
+          {{#if deanProcess}}
+              <div class="item item-divider">
+                  <h3 style="text-align:center;">Departments</h3>
+              </div>
+
+              {{#each department}}
+
+                <div class="item ink departmentSelectDelete" id="{{_id}}">
+                    {{departmentName}}
+                </div>
+
+              {{/each}}
+
+              <div id="dataGet">
+                  {{#if isAndroid}}
+                      <div class="spinnerClass">
+                          {{> ionSpinner icon="android"}}
+                      </div>
+                  {{else}}
+                      <div class="spinnerClass" >
+                          {{> ionSpinner icon="ios"}}
+                      </div>
+                  {{/if}}
+              </div>
+
+              <div class="col">
+                  <button class="button consModalAdd" id="depDeleteButton" style="float:right;"><h6 class="titleColor">Delete</h6></button>
+              </div>
+
+          {{else}}
+
+              {{#if isAndroid}}
+                  <div class="spinnerClass">
+                      {{> ionSpinner icon="android"}}
+                  </div>
+              {{else}}
+                  <div class="spinnerClass" >
+                      {{> ionSpinner icon="ios"}}
+                  </div>
+              {{/if}}
+          {{/if}}
+
+
+
+      {{else}}
+          <div class="centerClass">
+              DON'T HAVE DEPARTMENT TO DELETE
+          </div>
+      {{/if}}
+
+    {{/if}}
+
+    {{#if deleteTypeDepartmentHeadControl modalType}}
+        {{#if departmentHeadCountControl}} <!-- if have department so have departmentHead so we use same controller -->
+
+            {{#if deanProcess}}
+
+                <div class="item item-divider">
+                    <h3 style="text-align:center;">Department Heads</h3>
+                </div>
+
+                <div id="dataGet">
+                    {{#if isAndroid}}
+                        <div class="spinnerClass">
+                            {{> ionSpinner icon="android"}}
+                        </div>
+                    {{else}}
+                        <div class="spinnerClass" >
+                            {{> ionSpinner icon="ios"}}
+                        </div>
+                    {{/if}}
+                </div>
+
+                {{#each professor}}
+
+                    <div class="item ink departmentHeadSelectDelete" id="{{_id}}">
+                        {{professorName}}
+                    </div>
+
+                {{/each}}
+
+                <div class="col">
+                    <button class="button consModalAdd" id="depHeadDeleteButton" style="float:right;"><h6 class="titleColor">Delete</h6></button>
+                </div>
+
+            {{else}}
+
+                {{#if isAndroid}}
+                    <div class="spinnerClass">
+                        {{> ionSpinner icon="android"}}
+                    </div>
+                {{else}}
+                    <div class="spinnerClass" >
+                        {{> ionSpinner icon="ios"}}
+                    </div>
+                {{/if}}
+            {{/if}}
+
+      {{else}}
+
+          <div class="centerClass">
+              DON'T HAVE DEPARTMENT HEAD TO DELETE
+          </div>
+      {{/if}}
+    {{/if}}
+
+  {{/ionContent}}
+
+  {{/ionModal}}
+</template>

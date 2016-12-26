@@ -1,0 +1,25 @@
+<template name="lectureSelectLayout">
+  {{#if isAndroid}}
+      {{#ionBody}}
+
+        {{>ionHeaderBar class="homeHeader"}}
+
+        {{#ionNavView}}
+          {{>yield}}
+        {{/ionNavView}}
+
+      {{/ionBody}}
+
+  {{else}}
+      {{#ionBody}}
+
+        {{#ionNavView}}
+
+          {{>yield}}
+        
+        {{/ionNavView}}
+
+      {{/ionBody}}
+
+  {{/if}}
+</template>

@@ -1,0 +1,77 @@
+<template name="studentProfile">
+	{{#if isAndroid}}
+
+		<div class="bar bar-header bar-positive">
+			<button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left"></button>
+			<div class="col-10"></div>
+				<h1 class="title homeTitleAlign">Profile</h1>
+				{{#if studentProfileHome}}
+					<div class="buttons buttons-right header-item" id="studentProfileHome">
+						<span class="right-buttons">
+							<button class="button button-fab button-balanced">
+								<i class="icon ion-home"></i>
+							</button>
+						</span>
+					</div>
+				{{/if}}
+
+				{{#if studentProfileCheck}}
+					<div class="buttons buttons-right header-item" id="studentProfileCheck">
+						<span class="right-buttons">
+							<button class="button button-fab button-balanced">
+								<i class="icon ion-checkmark"></i>
+							</button>
+						</span>
+					</div>
+				{{/if}}
+		</div>
+
+		{{#ionView}}
+			{{#ionContent}}
+
+				<br><br>
+				<div class="padding">
+					<div class="padding">
+						<div class="list">
+							<div class="card stable-bg" id="studentProfile" style="background:transparent">
+								<a class="item"><h2> Name </h2><input type="text" placeholder="{{profile.name}}SA" id="studentName"></a>
+								<a class="item"><h2>Surname</h2><input type="text" placeholder="{{profile.surname}}AS" id="studentSurname"></a>
+								<a class="item"><h2>E-mail</h2><input type="text" placeholder="{{email.address}}AA" id="studentEmail"></a>
+								<a class="item"><h2>Password</h2><input type="password" placeholder="********" id="password"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			{{/ionContent}}
+		{{/ionView}}
+
+	{{else}}
+
+	<div class="bar bar-header barHeaderColoriOS">
+		<button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i></button>
+		<div class="col-10"></div>
+			<h1 class="title homeTitleAlign">Profile</h1>
+
+	</div>
+
+	{{#ionView}}
+		{{#ionContent}}
+			<br><br>
+			<div class="padding">
+				<div class="padding">
+					<div class="list">
+						<div class="card stable-bg" id="studentProfile" style="background:transparent">
+							<a class="item"><h2> Name </h2><input type="text" placeholder="{{profile.name}}SA" id="studentName"></a>
+							<a class="item"><h2>Surname</h2><input type="text" placeholder="{{profile.surname}}AS" id="studentSurname"></a>
+							<a class="item"><h2>E-mail</h2><input type="text" placeholder="{{email.address}}AA" id="studentEmail"></a>
+							<a class="item"><h2>Password</h2><input type="password" placeholder="********" id="password"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/ionContent}}
+	{{/ionView}}
+
+	{{/if}}
+</template>

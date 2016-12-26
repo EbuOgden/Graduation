@@ -1,0 +1,85 @@
+<template name="schoolLayout">
+  {{#if isAndroid}}
+    {{#ionBody}}
+        {{#ionSideMenuContainer side="left"}}<!-- Meteoric paketinden yararlanarak side menu olusturduk -->
+
+            {{#ionSideMenus}}<!-- Side Menunun icerigine baslangic -->
+
+                {{#ionSideMenu}}<!-- kullandigimiz side menunun icerigi -->  <!-- side menu kapatma data-ion-menu-close -->
+                    <div class="bar bar-header sideMenuBarColorAndroid">
+                        <h1 class="title titleColor">Menu</h1>
+                    </div>
+                    <div class="content has-header">
+                        <div class="Androidlist">
+                            <div class="item item-icon-left" id="homeButtonAndroid">
+                                <i class="icon ion-home"></i> Home
+                            </div>
+                            <div class="item item-icon-left" id="feedBackButtonAndroid">
+                                <i class="icon ion-paper-airplane"></i> Feedback
+                            </div>
+                            <div class="item item-icon-left" id="logOutButtonAndroid">
+                                <i class="icon ion-power"></i> Logout
+                            </div>
+                        </div>
+                    </div>
+              {{/ionSideMenu}}<!-- side menu bitisi -->
+
+            {{/ionSideMenus}}<!-- side menu kapanis -->
+
+            {{#ionSideMenuContent}}<!-- side menu kullanildigini belirtmek -->
+
+                {{>ionNavBar}}<!-- sayfanin bari -->
+
+                {{#ionNavView}}<!-- sayfa icerigi -->
+                    {{>yield}}
+                {{/ionNavView}}
+
+            {{/ionSideMenuContent}}<!-- side menu kullanildigi kapanis -->
+
+        {{/ionSideMenuContainer}}<!-- side menu komple kapanis -->
+
+    {{/ionBody}}
+
+  {{else}}
+
+  {{#ionBody}}
+      {{#ionSideMenuContainer side="left"}}<!-- Meteoric paketinden yararlanarak side menu olusturduk -->
+
+          {{#ionSideMenus}}<!-- Side Menunun icerigine baslangic -->
+
+              {{#ionSideMenu}}<!-- kullandigimiz side menunun icerigi -->  <!-- side menu kapatma data-ion-menu-close -->
+                  <div class="bar bar-header sideMenuBarColoriOS">
+                      <h1 class="title titleColor">Menu</h1>
+                  </div>
+                  <div class="content has-header">
+                      <div class="Androidlist">
+                          <div class="item item-icon-left" id="homeButtoniOS">
+                              <i class="icon ion-ios-home"></i> Home
+                          </div>
+                          <div class="item item-icon-left" id="feedBackButtoniOS">
+                              <i class="icon ion-paper-airplane"></i> Feedback
+                          </div>
+                          <div class="item item-icon-left" id="logOutButtoniOS">
+                              <i class="icon ion-ios-minus"></i> Logout
+                          </div>
+                      </div>
+                  </div>
+            {{/ionSideMenu}}<!-- side menu bitisi -->
+
+          {{/ionSideMenus}}<!-- side menu kapanis -->
+
+          {{#ionSideMenuContent}}<!-- side menu kullanildigini belirtmek -->
+
+              {{>ionNavBar id="iosNavBar"}}<!-- sayfanin bari -->
+
+              {{#ionNavView}}<!-- sayfa icerigi -->
+                  {{>yield}}
+              {{/ionNavView}}
+
+          {{/ionSideMenuContent}}<!-- side menu kullanildigi kapanis -->
+
+      {{/ionSideMenuContainer}}<!-- side menu komple kapanis -->
+
+  {{/ionBody}}
+  {{/if}}
+</template>

@@ -1,0 +1,68 @@
+<template name="consultantFacultyProcesses">
+    {{#if isAndroid}}
+      <div class="bar bar-header bar-positive">
+          <button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+          </button>
+          <div class="col-10"></div>
+          <h1 class="title homeTitleAlign">Faculty Processes</h1>
+          <div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-fab button-balanced studentHeaderHome"><i class="icon ion-home"></i></button></span></div>
+
+      </div>
+
+      {{#ionView}}
+        {{#ionContent}}
+
+        {{/ionContent}}
+      {{/ionView}}
+
+    {{else}}
+
+    <div class="bar bar-header barHeaderColoriOS">
+        <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+        </button>
+        <div class="col-10"></div>
+        <h1 class="title homeTitleAlign">Faculty Processes</h1>
+
+    </div>
+
+      {{#ionView}}
+        {{#ionContent}}
+
+                <div class="row">
+                  <div class="col">
+                    <div class="item item-divider">
+                        <h3 style="text-align:center;">Add Processes</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="padding">
+                  <button class="button button-block loginButtoniOS" id="addDepartment"><h6 class="titleColor">Add Department</h6></button>
+
+                  <button class="button button-block loginButtoniOS" id="addDepartmentHead"><h6 class="titleColor">Add Department Head</h6></button>
+
+                  <button class="button button-block loginButtoniOS" id="addConsultant"><h6 class="titleColor">Add Consultant</h6></button>
+
+                </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="item item-divider">
+                          <h3 style="text-align:center;">Delete Processes</h3>
+                      </div>
+                    </div>
+                  </div>
+                <div class="padding">
+                      <button class="button button-block buttonDelete" id="deleteDepartment"><h6 class="titleColor">Delete Department</h6></button>
+
+                      <button class="button button-block buttonDelete" id="deleteDepartmentHead"><h6 class="titleColor">Delete Department Head</h6></button>
+
+                      <!-- <button class="button button-block buttonDelete" id="deleteConsultant"><h6 class="titleColor">Delete Consultant</h6></button> -->
+
+                </div>
+
+        {{/ionContent}}
+      {{/ionView}}
+
+    {{/if}}
+
+</template>

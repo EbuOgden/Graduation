@@ -1,0 +1,79 @@
+<template name="schoolProcesses">
+  {{#if isAndroid}}
+    <div class="bar bar-header bar-positive">
+        <button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+        </button>
+        <div class="col-10"></div>
+        <h1 class="title homeTitleAlign">School Processes</h1>
+        <div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-fab button-balanced studentHeaderHome"><i class="icon ion-home"></i></button></span></div>
+
+    </div>
+
+    {{#ionView}}
+      {{#ionContent}}
+
+      {{/ionContent}}
+    {{/ionView}}
+
+  {{else}}
+
+  <div class="bar bar-header barHeaderColoriOS">
+      <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+      </button>
+      <div class="col-10"></div>
+      <h1 class="title homeTitleAlign">School Processes</h1>
+
+  </div>
+
+    {{#ionView}}
+      {{#ionContent}}
+
+      <div class="row">
+        <div class="col">
+          <div class="item item-divider">
+              <h3 style="text-align:center;">Add Processes</h3>
+          </div>
+        </div>
+      </div>
+      <div class="padding">
+        <button class="button button-block loginButtoniOS" id="addDean"><h6 class="titleColor">Add Dean</h6></button>
+
+        <button class="button button-block loginButtoniOS" id="addFaculty"><h6 class="titleColor">Add Faculty</h6></button>
+      </div>
+
+        <!-- <div class="row">
+          <div class="col">
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Delete Processes</h3>
+            </div>
+          </div>
+        </div>
+      <div class="padding">
+            <button class="button button-block buttonDelete" id="deleteDean"><h6 class="titleColor">Delete Dean</h6></button>
+
+            <button class="button button-block buttonDelete" id="deleteFaculty"><h6 class="titleColor">Delete Faculty</h6></button>
+      </div>
+        <div class="row">
+          <div class="col">
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Dangerous Zone</h3>
+            </div>
+          </div>
+        </div>
+        !All Deletes!
+
+        Delete StudentLectures
+        Delete ConsultantStudents
+        Delete ProfessorLectures
+        Delete ProfessorNotifications
+        Delete ConsultantNotifications
+        Delete NotificationRoomsClass
+        Delete NotificationRoomsConsultant
+        <div class="padding">
+            <button class="button button-block dangerousZone" id="allDelete"><h6 class="titleColor">Delete Semester</h6></button>
+        </div> -->
+      {{/ionContent}}
+    {{/ionView}}
+
+  {{/if}}
+</template>

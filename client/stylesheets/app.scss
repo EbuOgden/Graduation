@@ -1,0 +1,57 @@
+$positive: #387ef5;
+$royal: #00695C;
+
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+
+.ionic-body.platform-android {
+  font-family: "Roboto", sans-serif;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .tab-item {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.ion-slide {
+  text-align: center;
+  padding-top: 200px;
+
+  &.dark-bg {
+    h3 {
+      color: #fff;
+    }
+  }
+}
+
+.popover {
+  height: auto;
+}
+
+body.keyboard-open .platform-android .platform-ios .content.overflow-scroll {
+  bottom: 0px !important;
+}
+
+.item-button-left, .item-button-right {
+  button {
+    top: 16px !important;
+  }
+}
+
+.Androidlist .item {
+    border: none;
+    /*
+    padding-left: 16px;
+    padding-right: 16px;
+    */
+    // height: $item-tile-height;
+    text-align: left;
+}
+
+// Item Avatar
+// -------------------------------

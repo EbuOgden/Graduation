@@ -1,0 +1,58 @@
+<template name="professorClasses">
+  {{#if isAndroid}}
+		<div class="bar bar-header bar-positive">
+				<button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+				</button>
+				<div class="col-10"></div>
+				<h1 class="title homeTitleAlign">Classes</h1>
+				<div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-fab button-balanced studentHeaderHome"><i class="icon ion-home"></i></button></span></div>
+
+		</div>
+
+    {{#ionView}}
+      {{#ionContent}}
+          {{#each sa}}
+            {{lectureName}}
+          {{/each}}
+      {{/ionContent}}
+    {{/ionView}}
+
+  {{else}}
+
+  <div class="bar bar-header barHeaderColoriOS">
+      <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+      </button>
+      <div class="col-10"></div>
+      <h1 class="title homeTitleAlign">Classes</h1>
+
+  </div>
+
+  {{#ionView}}
+    {{#ionContent}}
+        <div class="row">
+          <div class="col">
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Lecture List</h3>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          {{#each profLectures}}
+
+          <div class="col">
+              <div class="col">
+              <a class="item ink item-icon-right profSendNotif" id="{{_id}}">
+                  <h4 class="notificationClick" >{{lectureName}}</h4>
+                  <i class="icon ion-ios-compose iconSendProfIos"></i>
+              </a>
+            </div>
+          </div>
+
+
+          {{/each}}
+        </div>
+
+    {{/ionContent}}
+  {{/ionView}}
+  {{/if}}
+</template>

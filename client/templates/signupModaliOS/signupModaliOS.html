@@ -1,0 +1,43 @@
+<template name="signupModaliOS">
+    {{#ionModal customTemplate=true class="contentModalBackgroundiOS"}}
+
+        <div class="bar bar-header bar-stable">
+            <h1 class="title">Sign Up</h1>
+            <button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+        </div>
+
+        {{#ionContent class="has-header"}}
+
+
+            <div class="list card">
+                <label class="item item-input">
+                    <input type="tel" id="username" maxlength="9" autocorrect="off" placeholder="Username" tabindex="0">
+                </label>
+            </div>
+
+            <div class="list card">
+                <label class="item item-input">
+                    <input type="text" id="name" autocorrect="off" placeholder="Name" tabindex="0">
+                </label>
+            </div>
+
+            <div class="list card">
+                <label class="item item-input">
+                    <input type="password" id="password" autocorrect="off" placeholder="Password" tabindex="0">
+                </label>
+            </div>
+
+            <div class="list card">
+                <label class="item item-input">
+                    <input type="password" id="rPassword" autocorrect="off" placeholder="Re-password" tabindex="0">
+                </label>
+            </div>
+
+                <div class="col">
+                    <button class="button iOSModalSignup" style="float:right;"><h6 class="titleColor">Sign Up</h6></button>
+                </div>
+
+        {{/ionContent}}
+    {{/ionModal}}
+
+</template>

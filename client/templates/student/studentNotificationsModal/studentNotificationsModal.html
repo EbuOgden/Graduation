@@ -1,0 +1,53 @@
+<template name="studentNotificationsModal">
+			{{#ionModal customTemplate=true class="contentModalBackgroundiOS"}}
+
+						{{#if notificationRoomTypeClassControl roomType}}
+								{{#with lectureInfo}}
+									<div class="bar bar-header bar-stable">
+											<h1 class="title">{{profName}}</h1>
+											<button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+									</div>
+								{{/with}}
+						{{/if}}
+
+						{{#if notificationRoomTypeConsultantControl roomType}}
+								{{#with consultantInfo}}
+								<div class="bar bar-header bar-stable">
+										<h1 class="title">{{consultantName}}</h1>
+										<button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+								</div>
+								{{/with}}
+						{{/if}}
+
+						{{#if notificationRoomTypeUniversityControl roomType}}
+								<div class="bar bar-header bar-stable">
+										<h1 class="title">University</h1>
+										<button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+								</div>
+
+						{{/if}}
+
+			{{#ionContent}}
+					<h5 style="text-align:center;">Notifications</h5>
+					<div class="row scrollableDiv">
+		        <div class="col">
+		          <div class="list">
+		              {{#each notifications}}
+		                <div class="item ink notificationClick" id="{{_id}}">
+		                    <h4>{{notificationMessage}}</h4>
+														<div class="card-footer text-right">
+																<h6>{{tm_now sendAt}}</h6>
+														</div>
+		                </div>
+		              {{/each}}
+		          </div>
+		        </div>
+
+		      </div>
+
+					{{/ionContent}}
+			{{/ionModal}}
+
+
+
+</template>

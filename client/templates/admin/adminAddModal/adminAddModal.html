@@ -1,0 +1,52 @@
+<template name="adminAddModal">
+    {{#ionModal customTemplate=true backdropClickToClose="false" class="contentModalBackgroundiOS"}}
+        <div class="bar bar-header bar-stable">
+            <h1 class="title">{{typeControlAdd modalType}}</h1>
+            <button class="button button-icon button-clear" id="iOSModalClose"><i class="icon ion-ios-close-empty"></i></button>
+        </div>
+
+        {{#ionContent class="generalView"}}
+
+        {{#if addTypeDeanControl modalType}}
+
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Faculties</h3>
+            </div>
+
+            {{#each faculty}}
+            <div class="item ink facultyAddDean" id="{{_id}}">
+                {{facultyName}}
+            </div>
+            {{/each}}
+
+            <div class="item item-divider">
+                <h3 style="text-align:center;">Professors</h3>
+            </div>
+
+            {{#each professor}}
+            <div class="item ink profAddDean" id="{{_id}}">
+                {{professorName}}
+            </div>
+            {{/each}}
+
+            <div class="col">
+                <button class="button consModalAdd" id="addDeanButton" style="float:right;"><h6 class="titleColor">Add Dean</h6></button>
+            </div>
+
+        {{/if}}
+
+        {{#if addTypeFacultyControl modalType}}
+            <div class="list card">
+                <label class="item item-input">
+                    <input type="text" id="facultyName" autocorrect="off" placeholder="Faculty Name" tabindex="0">
+                </label>
+            </div>
+
+            <div class="col">
+                <button class="button consModalAdd" id="addFacultyButton" style="float:right;"><h6 class="titleColor">Add Faculty</h6></button>
+            </div>
+        {{/if}}
+
+        {{/ionContent}}
+    {{/ionModal}}
+</template>

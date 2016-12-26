@@ -1,0 +1,59 @@
+<template name="home">
+	{{#if isAndroid}}
+
+	{{#ionView class="contentBackgroundiOS"}}
+			{{#ionContent}}
+				<div class="padding">
+						<br><br><br>
+
+						<div class="list card">
+								<label class="item item-input">
+										<input type="text" placeholder="Username" autocorrect="off" id="usernameAndroid">
+								</label>
+								<label class="item item-input">
+										<input type="password" placeholder="Password" autocorrect="off" id="passwordAndroid">
+								</label>
+						</div>
+
+								<button class="button button-block loginButtoniOS"><h6 class="titleColor">Login</h6></button>
+				</div>
+
+				<br><br>
+
+				<div class="registeriOS centerTitleClass"><h5 class="titleColor">New Student?</h5></div>
+
+				{{/ionContent}}
+		{{/ionView}}
+
+
+	{{else}}
+
+
+	{{#ionView class="contentBackgroundiOS"}}
+			{{#ionContent}}
+				<div class="padding">
+						<br><br><br>
+
+						<div class="list card">
+								<label class="item item-input">
+										<input type="text" placeholder="Username" autocorrect="off" id="usernameiOS">
+								</label>
+								<label class="item item-input">
+										<input type="password" placeholder="Password" autocorrect="off" id="passwordiOS">
+								</label>
+						</div>
+
+						<button class="button button-block loginButtoniOS"><h6 class="titleColor">Login</h6></button>
+
+				</div>
+
+				<br><br>
+
+						<div class="registeriOS centerTitleClass"><h5 class="titleColor">New Student?</h5></div>
+
+				{{/ionContent}}
+		{{/ionView}}
+
+	{{/if}}
+
+</template>

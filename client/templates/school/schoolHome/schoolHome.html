@@ -1,0 +1,54 @@
+<template name="schoolHome">
+  {{#if isAndroid}}
+
+
+          <div class="bar bar-header bar-positive">
+              <button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+              </button>
+              <div class="col-10"></div>
+              <h1 class="title homeTitleAlign">Home</h1>
+
+          </div>
+
+          {{#ionView}}
+              {{#ionContent}}
+
+                  <br><br>
+                  <div class="list">
+                      <div class="item card-item">
+                          <div class="card stable-bg ink ink-dark">
+                              <div class="item item-avatar item-text-wrap takedNote" id="{{random}}">
+                                  <span class="avatar" style="background-image: url('logo/logo.png');"></span>&nbsp;
+                                  <strong>MALTEPE UNIVERSITY</strong>
+                                  <h3 style="font-family: 'Roboto-Light'">&nbsp;&nbsp;OKUL TATIL </h3>
+                                  <div class="card-footer text-right">
+                                      <div class="pull-left">
+                                          <i class="icon ion-clock"></i> {{time}}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              {{/ionContent}}
+          {{/ionView}}
+
+
+  {{else}}
+
+  <div class="bar bar-header barHeaderColoriOS">
+      <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+      </button>
+      <div class="col-10"></div>
+      <h1 class="title homeTitleAlign">Home</h1>
+      <button class="button button-clear right" id="schoolNewNotif"><i class="sideMenuHamburgerColoriOS icon ion-ios-compose"></i></button>
+
+  </div>
+
+      {{#ionView}}
+          {{#ionContent class="has-header"}}
+
+          {{/ionContent}}
+      {{/ionView}}
+  {{/if}}
+</template>

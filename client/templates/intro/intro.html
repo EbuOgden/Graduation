@@ -1,0 +1,83 @@
+<template name="intro">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0, height=device-height, width=device-width"/> <!-- disable zoom, height and width settings-->
+	{{#if isAndroid}}
+
+		{{#ionView}}
+			{{#ionContent}}
+
+			{{#ionSlideBox}}
+
+			{{#ionSlide class="backgroundIntroAndroid"}}
+				<i class="icon ion-android-notifications iconsSize iconNotifColorAndroid"></i>
+
+				<h3 class="titleColor">Take News</h3>
+
+			{{/ionSlide}}
+
+
+			{{#ionSlide class="backgroundIntroAndroid"}}
+				<i class="icon hero-icon ion-clock iconsSize iconClockColorAndroid"></i>
+
+				<h3 class="titleColor">Anytime</h3>
+
+			{{/ionSlide}}
+
+			{{#ionSlide class="backgroundIntroAndroid"}}
+				<i class="icon ion-location iconsSize iconLocationColorAndroid"></i>
+
+				<h3 class="titleColor">Anywhere</h3>
+
+				<br><br>
+
+				<a href="{{pathFor 'home'}}">
+					<button class="button button-fab button-raised" id="homeButtonAndroid"><i class="icon ion-home"></i></button>
+				</a>
+			{{/ionSlide}}
+
+			{{/ionSlideBox}}
+
+			{{/ionContent}}
+
+		{{/ionView}}
+
+	{{else}}
+
+		{{#ionView}}
+			{{#ionContent}}
+
+			{{#ionSlideBox}}
+
+			{{#ionSlide class="backgroundIntroiOS"}}
+				<i class="icon ion-android-notifications iconsSize iconNotifColoriOS"></i>
+
+				<h3 class="titleColor">Take News</h3>
+
+			{{/ionSlide}}
+
+
+			{{#ionSlide class="backgroundIntroiOS"}}
+				<i class="icon hero-icon ion-clock iconsSize iconClockColoriOS"></i>
+
+				<h3 class="titleColor">Anytime</h3>
+
+			{{/ionSlide}}
+
+			{{#ionSlide class="backgroundIntroiOS"}}
+				<i class="icon ion-location iconsSize iconLocationColoriOS"></i>
+
+				<h3 class="titleColor">Anywhere</h3>
+
+				<a href="{{pathFor 'home'}}">
+						<button class="button button-fab button-raised" id="homeButtoniOS"><i class="icon ion-home"></i></button>
+				</a>
+			{{/ionSlide}}
+
+			{{/ionSlideBox}}
+
+			{{/ionContent}}
+
+		{{/ionView}}
+
+	{{/if}}
+
+</template>

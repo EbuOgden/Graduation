@@ -1,0 +1,70 @@
+<template name="studentConsultant">
+  {{#if isAndroid}}
+
+      <div class="bar bar-header bar-positive">
+          <button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+          </button>
+          <div class="col-10"></div>
+          <h1 class="title homeTitleAlign">Consultant</h1>
+          <div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-fab button-balanced studentHeaderHome"><i class="icon ion-home"></i></button></span></div>
+
+      </div>
+
+      {{#ionView}}
+          {{#ionContent class="has-header"}}
+
+
+              <div class="list">
+                  <div class="item card-item">
+                      <div class="card stable-bg ink ink-dark">
+                          <div class="item item-avatar item-text-wrap takedNote" id="{{random}}">
+                              <span class="avatar" style="background-image: url('teachers/senol_erdogan.gif');"></span>&nbsp;
+                              <strong>Senol Zafer ERDOGAN</strong>
+                              <h3 style="font-family: 'Roboto-Light'">&nbsp;&nbsp;AYIN 15 INDE SUNUM YAPACAKSINIZ! </h3>
+                              <div class="card-footer text-right">
+                                  <div class="pull-left">
+                                      <i class="icon ion-clock"></i> {{time}}
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          {{/ionContent}}
+      {{/ionView}}
+
+  {{else}}
+
+      <div class="bar bar-header barHeaderColoriOS">
+          <button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+          </button>
+          <div class="col-10"></div>
+          <h1 class="title homeTitleAlign">Consultant</h1>
+
+      </div>
+
+      {{#ionView}}
+          {{#ionContent class="has-header"}}
+            {{#each notificationConsultantRoom}}
+                <div class="list">
+                  <div class="card stable-bg ink">
+                    <a class="item item-avatar card-item consultantNotifs" id="{{_id}}" data-type={{notificationRoomInfo.type}}>
+                        <img src="logo/logo.png">
+                        <strong>{{consultantNameReg notificationRoomInfo.ownerId}}</strong>
+                        <p>{{consultantLastNotifReg _id}}</p>
+                        <div class="card-footer text-right">
+                          <div class="pull-left">
+                            <h6>{{consultantLastNotifTimeReg _id}}</h6>
+                          </div>
+                        </div>
+
+                    </a>
+                  </div>
+                </div>
+            {{/each}}
+          {{/ionContent}}
+      {{/ionView}}
+
+  {{/if}}
+
+</template>

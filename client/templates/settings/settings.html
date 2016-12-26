@@ -1,0 +1,40 @@
+<template name="settings">
+	{{#if isAndroid}}
+
+		<div class="bar bar-header bar-positive">
+			<button class="button button-clear icon ion-navicon-round" data-ion-menu-toggle="left">
+			</button>
+			<div class="col-10"></div>
+			<h1 class="title homeTitleAlign">Settings</h1>
+			<div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-fab button-balanced studentHeaderHome"><i class="icon ion-home"></i></button></span></div>
+
+		</div>
+
+		{{#ionView}}
+			{{#ionContent}}
+				<br><br>
+				Settings
+				<button class="button button-clear sa"></button>
+			{{/ionContent}}
+		{{/ionView}}
+
+	{{else}}
+
+		<div class="bar bar-header barHeaderColoriOS">
+			<button class="button button-clear" data-ion-menu-toggle="left"><i class="sideMenuHamburgerColoriOS icon ion-navicon-round"></i>
+			</button>
+			<div class="col-10"></div>
+			<h1 class="title homeTitleAlign">Settings</h1>
+
+		</div>
+
+		{{#ionView}}
+			{{#ionContent}}
+				<br><br>
+				Settings
+				<button class="button button-clear sa"></button>
+			{{/ionContent}}
+		{{/ionView}}
+
+	{{/if}}
+</template>
