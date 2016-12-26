@@ -4,10 +4,10 @@ if(Meteor.isClient || Meteor.isCordova){
       e.preventDefault();
 
       if(Meteor.Device.isDesktop()){
-        window.open("https://www.mek.k12.tr/ilkogretim-okullarimiz/detay/Yemek-Listesi/1473/2135/0");
+        window.open("");
       }
       else{
-          cordova.InAppBrowser.open('https://www.mek.k12.tr/ilkogretim-okullarimiz/detay/Yemek-Listesi/1473/2135/0', '_blank', 'location=yes');
+          cordova.InAppBrowser.open('', '_blank', 'location=yes');
       }
 
     }
