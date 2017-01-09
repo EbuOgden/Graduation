@@ -4,7 +4,7 @@ App.info({
      name: 'Graduation',
      description: 'An app for initial communication between academics and students',
      version: '0.0.1',
-     author : 'Ebubekir Öğden',
+     author : 'Ebubekir Ogden',
      email : 'ebubekirogden@gmail.com'
 });
 
