@@ -3,7 +3,7 @@ University Graduation Project
 
 Cross Platform ( Web, iOS, Android ) Announcement System.
 
-Everyone can log in to this application by website or by their smartphone, whenever they want, wherever they are.
+Everyone can log in to this application on website or by their smartphones, whenever they want, wherever they are.
 
 - Professors can send messages to students who take their classes. Also professors can see who read the messages.
 - Student's consultant can send messages to students.
